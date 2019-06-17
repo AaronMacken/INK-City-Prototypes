@@ -1,0 +1,65 @@
+
+html, body {
+    background: black;
+}
+
+nav {
+    margin-bottom: 5vh;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 25vw;
+    margin: 5%;
+    /* add this to img */
+    /* cursor: pointer; */
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.card-img-top {
+    height: 15vw;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+
+.card-title {
+    margin: .75rem auto;
+    text-align: center;
+}
+
+.card-title:after {
+    display: block;
+    height: 2px;
+    background-color: #8e44ad;
+    content: " ";
+    width: 25%;
+    margin: 0 auto;
+    margin-top: .5rem;
+}
+
+.card-content {
+    margin: .75 auto;
+    padding: 3%;
+}
+
+.card .card-about {
+    margin-bottom: .75rem;
+}
