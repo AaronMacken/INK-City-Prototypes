@@ -24,7 +24,7 @@
   
   html,
   body {
-    background-color: black;
+    background-color: #fff;
     color: #555;
     font-family: "Raleway", sans-serif;
     font-size: 20px;
@@ -132,11 +132,13 @@
     border-bottom: 2px solid transparent;
   }
   /* ------ Main Nav ------ */
-  
+  nav{
+    background: black;
+  }
   .main-nav {
     float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 45px;
   }
   
   .main-nav li {
@@ -165,8 +167,39 @@
     height: 100px;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin: 5px auto;
   }
+
+  /* ------ Sticky Nav ------ */
+
+  .padding-body {
+    padding-top: 110px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.966);
+    z-index: 9999;
+  }
+
+  .sticky .main-nav {
+    margin-top: 19px;
+  }
+
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    padding: 0;
+  }
+
+  .sticky .logo {
+    height: 50px;
+    width: 50px;
+    margin: 5px 0;
+  }
+
   /* ------- BUTTONS ------ */
   
   .btn:link,
