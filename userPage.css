@@ -1,99 +1,150 @@
-
-html, body {
-    background: black;
+html,
+body {
+  background: #ddd;
 }
 
+nav {
+  background-color: black;
+  box-shadow: 0 2px 5px;
+}
 
 /* ------ Outer Grid ------ */
 .page-layout-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 2%;
-    margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+  margin: 2%;
 }
 
 /* ------ Card Styling ------ */
 .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: .25rem;
-    border-radius: 10px;
-    width: 25vw;
-    box-shadow: 0 0 10px;
-    /* add this to img */
-    /* cursor: pointer; */
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  width: 20vw;
+  box-shadow: 2px 2px 5px 2px #888888;
 }
 
 img {
-    vertical-align: middle;
-    border-style: none;
+  vertical-align: middle;
+  border-style: none;
 }
 
 .card-img-top {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border: 3px solid black;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+  height: 35vh;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .card-title {
-    margin: .75rem auto;
-    text-align: center;
+  font-size: 110%;
+  margin: 0.75rem auto;
+  text-align: center;
 }
 
 .card-title:after {
-    display: block;
-    height: 2px;
-    background-color: #8e44ad;
-    content: " ";
-    width: 25%;
-    margin: 0 auto;
-    margin-top: .5rem;
+  display: block;
+  height: 2px;
+  background-color: #8e44ad;
+  content: " ";
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
 }
 
 .card-content {
-    padding: 3%;
-    font-size: 80%;
-    letter-spacing: 1px;
-    line-height: 1rem;
-    width: 95%;
-    margin: 0 auto;
+  padding: 3%;
+  font-size: 80%;
+  letter-spacing: 1px;
+  line-height: 1rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .card-user-description:after {
-    display: block;
-    height: 2px;
-    background-color: #8e44ad;
-    content: " ";
-    width: 90%;
-    margin: .75rem auto;
+  display: block;
+  height: 2px;
+  background-color: #8e44ad;
+  content: " ";
+  width: 90%;
+  margin: 0.75rem auto;
 }
 
 .card .card-about {
-    margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-follow-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    margin-bottom: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
-
 
 /* ------ Content Panel Styling ------ */
 
-.content-panel {
-    background: pink;
-    min-height: 500px;
+.content-column {
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 2px #888888;
+  border-radius: 3px;
+  
+}
+
+/* ------ Tab Styling ------ */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background: #c4c3c3;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: #c4c3c3;
+  color: #fff;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  border-bottom: none;
+  font-size: 110%;
+  transition: .3s
+}
+
+#defaultOpen {
+  border-top-left-radius: 3px;
+}
+#btnRight {
+  border-top-right-radius: 3px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+
+  color: #484848;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fff;
+  color: #484848;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  
 }

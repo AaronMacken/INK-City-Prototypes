@@ -1,60 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="userPage.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="reusable.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap" rel="stylesheet"/>
-    <title>Username Variable</title>
-</head>
-<body>
+    <link rel="stylesheet" href="userPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>User Profile Page</title>
+  </head>
+  <body>
     <nav class="clearfix">
-        <div class="row clearfix">
-            <a href="/"><img src="logo.png" alt="INK City logo" class="logo"/></a>
-            <ul class="main-nav">
-                <li><a href="/">About</a></li>
-                <li><a href="/browse">Browse</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
-        </div>
+      <div class="row clearfix">
+        <a href="/"><img src="logo.png" alt="INK City logo" class="logo"/></a>
+        <ul class="main-nav">
+          <li><a href="/">About</a></li>
+          <li><a href="/browse">Browse</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="page-layout-grid js--page-layout-grid">
+
+      <div class="page-layout-grid js--page-layout-grid">
+        <!-- Card -->
         <div class="card">
-            <img src="aaron.jpeg" class="card-img-top" id="aaron">
-            <div class="card-body">
-                <h5 class="card-title">Aaron Macken</h5>
-                <div class="card-content">
-                    <p class="card-about">About</p>
-                    <p class="card-user-description">My name is Aaron and I am a web developer! I currently create 
-                        my sites using mongo, express, node and NPM.
-                    </p>
-                    <div class="card-follow-grid">
-                        <p>Following</p>
-                        <p>135</p>
-                    </div>
-                </div>
+          <img src="aaron.jpeg" class="card-img-top" id="aaron" />
+          <div class="card-body">
+            <h5 class="card-title">Aaron Macken</h5>
+            <div class="card-content">
+              <p class="card-about">About</p>
+              <p class="card-user-description">
+                My name is Aaron and I am a web developer! I currently create my
+                sites using mongo, express, node and NPM.
+              </p>
+              <div class="card-follow-grid">
+                <p>Following</p>
+                <p>135</p>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="content-panel">
-            Hello
+        <!-- Content Col -->
+        <div class="content-column">
+          <!-- Tab Instructions -->
+          <!--    Create buttons to open specific tab content.
+            All <div> elements with class="tabcontent" are hidden by default (with CSS & JS).
+            When the user clicks on a button - it will open the tab content that "matches" this button. -->
+
+          <!-- Tab Links -->
+          <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Following')">
+              Following
+            </button>
+            <button class="tablinks" id="btnRight" onclick="openTab(event, 'Friends')">
+              Friends
+            </button>
+          </div>
+
+          <!-- Tab content -->
+          <div id="Following" class="tabcontent">
+            <h3>Following</h3>
+            <p>Aaron is following:</p>
+          </div>
+
+          <div id="Friends" class="tabcontent">
+            <h3>Posts</h3>
+            <p>Sample post here</p>
+          </div>
         </div>
-        <div class="content-panel">
-                Hello
-            </div>
-            <div class="content-panel">
-                    Hello
-                </div>
-    </div>
-    
+      </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      rossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
     <script src="stickyJquery.js"></script>
-</body>
+    <script src="tab.js"></script>
+  </body>
 </html>
